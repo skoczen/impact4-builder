@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<impact4>
+<!-- This is the configuration file for the NeoNatal Herpes survey 
+		Based on "herpes risk assessment0517cg.ppt"      				-->
+<configuration>
+		<!--		<help module="fooType" filename="vasHelp.swf" /> -->
+		<display allowback="true" allowquit="false">
+			<screen height="800" width="600" />
+			<titlebar text="Neonatal Herpes" />
+		</display>
+		<property name="defaultModemBuffer" value="100" type="integer" />
+		<property name="defaultIsdnBuffer" value="100" type="integer" />
+		<property name="defaultCableBuffer" value="100" type="integer" />
+		<property name="checkXMLValidity" value="true" type="boolean" />
+		<property name="navType" value="full" type="string" />
+		<property name="showProgressBar" value ="true" type="boolean"/>
+		<property name="dumpDatabaseBeforeNavigation" value="false" type="boolean" />
+		<property name="calculateProgressBar" value="true" type="boolean" />
+		<property name="traceSetValue" value="true" type="boolean" />
+		<property name="traceToConsole" value="false" type="boolean" />
+		<property name="enableGarbageCollection" value="false" type="boolean" />
+
+		<!--	<property name="useCacheManager" value="true" type="boolean"/>-->
+
+		<library name="library_HSVData" />
+		<data projectName="NeonatalHSV">
+			<xmlsocketclient server="pref1.ucsd.edu" port="8080" />
+		</data>
+</configuration>
+<navigation>
+	<group>
+		<module type="widget_text" x="150" y="175" >
+			<const type="integer" name="width" value="700" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">
+			<font size="+4">Please enter the Unique ID for this participant.</font></font> ]]> </const>
+		</module>	
+		<module type="widget_inputText" name="clientID" x="150" y="210">
+			<field type="string" name="inputName" />
+		</module>
+
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	     <const type="string" name="sectionText" value="Welcome!"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click Next to confirm this value.</font> 
+				]]> </const>
+		</module>
+	</group>
+	<group>
+		<module type="generateID" x="120" y="165" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+		</module>	
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+         <const type="string" name="sectionText" value="Welcome!"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click Next to begin the survey.</font> 
+				]]> </const>
+		</module>
+	</group>
+	<group>
+		<module type="widget_text" x="150" y="75" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">
+			<font size="+4"><br><br>Welcome to the Patient Preferences to Prevent Neonatal Herpes Survey.
+			<br><br><br><br>Thank you for your participation!
+								</font></font> ]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+         <const type="string" name="sectionText" value="Welcome!"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">When you're ready to start, click Next (the right arrow) to begin!</font> 
+				]]> </const>
+		</module>
+	</group>
+	<group>
+		<module type="widget_text" x="150" y="75" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7">Objectives</font><br><br><br><br>
+			<font face="Lucida Grande" size="+4">
+				<ul><li>This presentation will give you information about herpes in adults and newborn babies.</li><br><br>
+				<li>One way to prevent herpes in newborn babies is to have a Cesarean delivery.</li><br><br>
+				<li>You will learn how herpes can affect a baby and how Cesarean delivery can affect you.</li><br><br>
+				<li>After viewing this presentation, a study investigator will ask you your preferences to prevent neonatal herpes.</li><br><br>
+			</ul>		
+			</font> ]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+         <const type="string" name="sectionText" value="Welcome! (Objectives)"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">When you're ready to start, click Next (the right arrow) to begin!</font> 
+				]]> </const>
+		</module>
+	</group>
+	<group>
+		<module type="widget_text" x="140" y="60" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7">Before we get started, we need a little information about you.</font></font> ]]></const>
+		</module>	
+		<module type="widget_text" x="160" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="Your Information"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">When you're ready to start, click Next (the right arrow) to begin!</font> 
+				]]> </const>
+		</module>
+
+		<module type="widget_text" x="165" y="119" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>How old are you?</b></font> ]]></const>
+		</module>	
+		<module name="age" type="widget_selectOneNumber" x="330" y="125" >
+			<const type="integer" name="topLimit" value="105"/>
+			<const type="integer" name="bottomLimit" value="10"/>
+			<const type="integer" name="startingValue" value="30" />
+			<field type="integer" name="value" />
+		</module>
+		
+		
+		<module type="widget_text" x="160" y="210" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>What type of provider do you see for your pregnancy?</b> </font> 	]]></const>
+		</module>	
+		<module type="widget_checkbox" name="providerType_obgyn" x="180" y="240"> 
+			<field type="integer" name="checkBoxValue" />
+			<const type="string" name="label" value="Ob/Gyn" />
+		</module>
+		<module type="widget_checkbox" name="providerType_famprac" x="300" y="240"> 
+			<field type="integer" name="checkBoxValue" />
+			<const type="string" name="label" value="Family Practitioner" />
+		</module>
+		<module type="widget_checkbox" name="providerType_midwife" x="180" y="290"> 
+			<field type="integer" name="checkBoxValue" />
+			<const type="string" name="label" value="Midwife" />
+		</module>						
+		<module type="widget_checkbox" name="providerType_perin" x="300" y="290"> 
+			<field type="integer" name="checkBoxValue" />
+			<const type="string" name="label" value="Perinatologist/High-risk OB" />
+		</module>
+		<module type="widget_checkbox" name="providerType_other" x="500" y="240"> 
+			<field type="integer" name="checkBoxValue" />
+			<const type="string" name="label" value="Other" />
+		</module>
+
+		
+		<module type="widget_text" x="160" y="390" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>How many live births have you had?</b></font> ]]></const>
+		</module>
+		<module name="numDeliveries" type="widget_selectOneNumber" x="462" y="396" >
+			<const type="integer" name="topLimit" value="15"/>
+			<const type="integer" name="bottomLimit" value="0"/>
+			<const type="integer" name="startingValue" value="0" />
+			<field type="integer" name="value" />
+		</module>
+		
+		
+	</group>
+	<group>
+		<module type="widget_text" x="160" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="Your Information"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click the next arrow to continue.</font> 
+				]]> </const>
+		</module>
+
+		<module type="widget_text" x="165" y="100" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>Have you had a Cesarean delivery in the past?</b></font> ]]></const>
+		</module>	
+		<module type="widget_selectBox" name="casareanPast" x="280" y="140">
+			<const type="integer" name="numItems" value="2" />
+			<const type="string" name="itemName1" value="Yes" />
+			<const type="string" name="itemName2" value="No" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	
+	
+		<module type="widget_text" x="165" y="300" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>If you could choose a method of delivery for your baby, would it be:</b></font> ]]></const>
+		</module>	
+		<module type="widget_selectBox" name="deliveryMethod" x="280" y="350">
+			<const type="integer" name="numItems" value="3" />
+			<const type="string" name="itemName1" value="Vaginal" />
+			<const type="string" name="itemName2" value="Cesarean" />
+			<const type="string" name="itemName3" value="I don't know" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	</group>
+
+		
+
+	<group>
+		<module type="widget_text" x="160" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="Your Information"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click the next arrow to continue.</font> 
+				]]> </const>
+		</module>
+
+		<module type="widget_text" x="165" y="70" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>Do you have genital herpes?</b></font> ]]></const>
+		</module>	
+		<module type="widget_selectBox" name="hasHerpes" x="280" y="100">
+			<const type="integer" name="numItems" value="3" />
+			<const type="string" name="itemName1" value="Yes" />
+			<const type="string" name="itemName2" value="No" />
+			<const type="string" name="itemName3" value="I don't know" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	
+	
+		<module type="widget_text" x="165" y="300" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>Have you had a blood test for herpes in this pregnancy?</b></font> ]]></const>
+		</module>	
+		<module type="widget_selectBox" name="bloodTest" x="280" y="330">
+			<const type="integer" name="numItems" value="3" />
+			<const type="string" name="itemName1" value="Yes" />
+			<const type="string" name="itemName2" value="No" />
+			<const type="string" name="itemName3" value="I don't know" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	
+
+	</group>
+
+	<condition lval="bloodTest.selectedItemIndex" operation="equals" rval="1">
+		<true>
+			<group>
+				<module type="widget_text" x="160" y="525" >
+					<const type="integer" name="width" value="600" />
+					<const type="integer" name="height" value="600" />
+				   <const type="string" name="sectionText" value="Your Information"/>	
+					<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click the next arrow to continue.</font> 
+						]]> </const>
+				</module>
+				<module type="widget_text" x="165" y="70" >
+					<const type="integer" name="width" value="500" />
+					<const type="integer" name="height" value="60" />
+					<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>What was the result of the blood test?</b></font> ]]></const>
+				</module>		
+			<module type="widget_checkbox" name="herpesTestResult_no" x="190" y="115">
+				<field type="integer" name="checkBoxValue" />
+				<const type="string" name="label" value="No Herpes" />
+			</module>
+			<module type="widget_checkbox" name="herpesTestResult_hsv1" x="190" y="155"> 
+				<field type="integer" name="checkBoxValue" />
+				<const type="string" name="label" value="HSV 1" />
+			</module>
+			<module type="widget_checkbox" name="herpesTestResult_hsv2" x="190" y="195"> 
+				<field type="integer" name="checkBoxValue" />
+				<const type="string" name="label" value="HSV 2" />
+			</module>						
+			<module type="widget_checkbox" name="herpesTestResult_dontKnow" x="190" y="235"> 
+				<field type="integer" name="checkBoxValue" />
+				<const type="string" name="label" value="Don't know" />
+			</module>
+			</group>
+		</true>	
+		<false>
+		</false>
+	</condition>
+
+
+	<group>
+		<module type="widget_text" x="160" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="Your Information"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click the next arrow to continue.</font> 
+				]]> </const>
+		</module>
+
+		<module type="widget_text" x="165" y="50" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>Has your prenatal provider discussed herpes with you?</b> 
+			</font> ]]></const>
+		</module>	
+		<module type="widget_selectBox" name="prenatalHerpesDiscussion" x="280" y="80">
+			<const type="integer" name="numItems" value="2" />
+			<const type="string" name="itemName1" value="Yes" />
+			<const type="string" name="itemName2" value="No" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	
+	
+		<module type="widget_text" x="165" y="210" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>Do you know anyone who had a baby with neonatal herpes?</b>
+			</font> ]]></const>
+		</module>	
+		<module type="widget_selectBox" name="knowOfHerpes" x="280" y="240">
+			<const type="integer" name="numItems" value="2" />
+			<const type="string" name="itemName1" value="Yes" />
+			<const type="string" name="itemName2" value="No" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	
+		<module type="widget_text" x="165" y="370" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>Does your partner have genital herpes?</b>
+			</font> ]]></const>
+		</module>	
+		<module type="widget_selectBox" name="partnerHasHerpes" x="280" y="400">
+			<const type="integer" name="numItems" value="3" />
+			<const type="string" name="itemName1" value="Yes" />
+			<const type="string" name="itemName2" value="No" />
+			<const type="string" name="itemName3" value="I don't know" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	</group>
+
+	
+	<group>
+		<module type="widget_text" x="160" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="Your Information"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Thanks for your responses. Click the next arrow to continue the presentation.</font> 
+				]]> </const>
+		</module>
+
+		<module type="widget_dropDown" name="maritalStatus" x="180" y="125" level="8">
+			<const type="boolean" name="requireAnswer" value="false" />
+			<const type="integer" name="numItems" value="4" />
+			<const type="string" name="startingText" value="Click Here to Answer" />
+			<const type="string" name="itemName1" value="Married" />
+			<const type="string" name="itemName2" value="Single" />
+			<const type="string" name="itemName3" value="Divorced / Separated" />
+			<const type="string" name="itemName4" value="Living as married" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+		<module type="widget_text" x="165" y="100"  level="3">
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>What is your marital status?</b> 
+			</font> ]]></const>
+		</module>	
+
+		<module type="widget_dropDown" name="ethnicity" x="180" y="255" level="7">
+			<const type="boolean" name="requireAnswer" value="false" />
+			<const type="integer" name="numItems" value="5" />
+			<const type="string" name="startingText" value="Click Here to Answer" />
+			<const type="string" name="itemName1" value="White" />
+			<const type="string" name="itemName2" value="African-American" />
+			<const type="string" name="itemName3" value="Latina" />
+			<const type="string" name="itemName4" value="Asian" />
+			<const type="string" name="itemName5" value="Native American" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+		<module type="widget_text" x="165" y="230"  level="2">
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>Which best describes your race/ethnicity?</b>
+			</font> ]]></const>
+		</module>	
+	
+		<module type="widget_dropDown" name="income" x="180" y="385" level="6">
+			<const type="boolean" name="requireAnswer" value="false" />
+			<const type="integer" name="numItems" value="4" />
+			<const type="string" name="startingText" value="Click Here to Answer" />
+			<const type="string" name="itemName1" value="Less than $20,000" />
+			<const type="string" name="itemName2" value="$20,000-$50,000" />
+			<const type="string" name="itemName3" value="$50,000-$100,000" />
+			<const type="string" name="itemName4" value="More than $100,000" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+		<module type="widget_text" x="165" y="360"  level="1">
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>What is your annual household income?</b>
+			</font> ]]></const>
+		</module>
+	</group>
+
+	<group>
+		<module type="widget_text" x="150" y="150" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>What is Herpes?</b></font><br><br><br><br>
+			<font size="+4">Herpes is caused by a virus (HSV).  There are two types:  
+					<ul><li>HSV-1 can cause sores around the mouth such as cold sores.</li>
+					<li>HSV-2 can cause sores on the vulva, vagina, or penis (the genitals).</li></ul><br/>
+			<br/>In pregnancy genital herpes is important because the virus can infect the baby during vaginal delivery.
+			</font> ]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Herpes"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+	<group>
+		<module type="widget_text" x="150" y="150" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>How Common is Herpes?</b></font><br><br>
+			<font size="+4">About 1 in 4 pregnant women<br/>test positive for HSV-2, the<br/>commonest cause of genital herpes.<br/><br/>The box to the right shows 100 squares.<br>Yellow squares show the number of women<br>who test positive for HSV-2.<br/><br/><br/><br/>
+			<br/><i>Up to <u>90%</u> of pregnant women with genital herpes <u>do not know</u> that they have herpes.</i><br/>
+			</font> ]]> </const>
+		</module>
+		<module type="probabilityGrid" x="500" y="160" scale="75">
+		   <const type="string" name="textCaption" value="About 1 in 4 pregnant women test positive for    HSV-2." />	
+			<const type="integer" name="numColumns" value="10" />
+			<const type="integer" name="numRows" value="10" />
+			<const type="integer" name="numAffected" value="25" />
+		</module>
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Herpes"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+	<group>
+		<module type="widget_text" x="150" y="150" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>How Do You Get Genital Herpes?</b></font><br><br><br><br>
+			<font size="+4">There are two types:  
+					<ul><li>You get genital herpes from sexual contact with somebody who has herpes on his/her mouth or genitals.<br><br></li>
+					<li>You can be infected with herpes even when your partner does not have sores or does not know that he/she has herpes.</li></ul><br/>
+			</font> ]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Herpes"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+
+	<group>
+		<module type="widget_text" x="150" y="150" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>Genital Herpes may look like this:</b><br><br><br><br><br/><br/><br/><br/><br/><br/><br/><br/>
+				<br/>Or, there may be <b>NO</b> symptoms or sores.<br/><br/>
+			</font> ]]> </const>
+		</module>
+		<module type="herpesInfo1" x="100" y="235">
+		</module>
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Herpes"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+
+	<group>
+		<module type="widget_text" x="150" y="150" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>How Can Genital Herpes Hurt Your Baby?</b></font><br><br><br><br>
+			<font size="+4">If the baby contacts the herpes virus as he/she passes through the birth canal at delivery, the baby could become infected.<br/><br/>
+			<br/>Neonatal herpes might make your baby very sick and possibly cause death or complications like cerebral palsy.
+			</font> ]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Herpes"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+
+	<group>
+		<module type="widget_text" x="150" y="60" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>If Your Baby Gets Neonatal Herpes, How Sick Will He/She Be?</b></font><br><br>
+			<font size="+4">The baby would need immediate hospitalization for blood tests, spinal tap and intravenous medication for at least 14 days.
+	<br/>With treatment:
+			</font> ]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="535" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Herpes"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+		<module type="probabilityGrid" x="150" y="170" scale="65">
+		   <const type="string" name="textCaption" value="50% of babies do well and are normal." />	
+			<const type="integer" name="numColumns" value="10" />
+			<const type="integer" name="numRows" value="10" />
+			<const type="integer" name="numAffected" value="50" />
+		</module>
+		<module type="probabilityGrid" x="350" y="170" scale="65">
+		   <const type="string" name="textCaption" value="6% have mild neurologic problems." />	
+			<const type="integer" name="numColumns" value="10" />
+			<const type="integer" name="numRows" value="10" />
+			<const type="integer" name="numAffected" value="6" />
+		</module>
+		<module type="probabilityGrid" x="550" y="170" scale="65">
+		   <const type="string" name="textCaption" value="6.5% have moderate neurologic problems." />	
+			<const type="integer" name="numColumns" value="10" />
+			<const type="integer" name="numRows" value="10" />
+			<const type="integer" name="numAffected" value="7" />
+		</module>
+		<module type="probabilityGrid" x="150" y="345" scale="65">
+		   <const type="string" name="textCaption" value="14% have severe neurologic problems." />	
+			<const type="integer" name="numColumns" value="10" />
+			<const type="integer" name="numRows" value="10" />
+			<const type="integer" name="numAffected" value="14" />
+		</module>
+		<module type="probabilityGrid" x="350" y="345" scale="65">
+		   <const type="string" name="textCaption" value="22.5% die." />	
+			<const type="integer" name="numColumns" value="10" />
+			<const type="integer" name="numRows" value="10" />
+			<const type="integer" name="numAffected" value="23" />
+		</module>
+
+
+	</group>
+
+	<group>
+		<module type="widget_text" x="150" y="50" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>Examples of Infants with Neonatal Herpes</b>
+			</font> ]]> </const>
+		</module>
+		<module type="herpesInfo2" x="100" y="100">
+		</module>
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Herpes"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+	<group>
+		<module type="widget_text" x="150" y="100" >
+			<const type="integer" name="width" value="400" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>Summary of Herpes</b></font><br><br>
+			<br /><font size="+4">
+	<br/><ul><li>About 25% of women have genital herpes.<br/></li>
+	<li>About 2% of women get herpes while pregnant.<br/></li>
+	<li>Most people with herpes do not know that they have herpes.<br/></li>
+	<li>It is possible to give your baby herpes at the time of delivery if you have genital herpes.<br/></li>
+	<li>Babies with herpes need immediate hospitalization and treatment.<br/></li>
+	<li>Even with treatment, the baby may have long term problems or die.</li></ul>
+	</font>
+			</font> ]]> </const>
+		</module>	
+		<module type="probabilityGrid" x="560" y="80" scale="70">
+		   <const type="string" name="textCaption" value="About 25% of women have genital herpes." />	
+			<const type="integer" name="numColumns" value="10" />
+			<const type="integer" name="numRows" value="10" />
+			<const type="integer" name="numAffected" value="25" />
+		</module>
+		<module type="probabilityGrid" x="560" y="290" scale="70">
+		   <const type="string" name="textCaption" value="About 2% of women get herpes while pregnant." />	
+			<const type="integer" name="numColumns" value="10" />
+			<const type="integer" name="numRows" value="10" />
+			<const type="integer" name="numAffected" value="2" />
+		</module>
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Herpes"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+	<group>
+		<module type="widget_text" x="150" y="150" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>What is Recommended to Prevent Neonatal Herpes?</b></font><br><br><br><br>
+			<font size="+4">Currently, one method to prevent neonatal herpes is Cesarean delivery for women with genital sores at the time of labor.
+			</font> ]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Cesarean Delivery"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+	<group>
+		<module type="widget_text" x="150" y="150" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>What is a Cesarean Delivery?</b></font><br><br><br><br>
+			<font size="+4"><ul><li>Delivery of the baby through an incision in the abdomen.<br/></li>
+	<li>It is the most common surgery performed in the United States.<br/></li>
+	<li>About 22% of all deliveries in the United States are by Cesarean.<br/></li></ul>
+			</font> ]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Cesarean Delivery"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+	<group>
+		<module type="widget_text" x="150" y="120" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>Incision on the Skin</b></font><br>
+			<font size="+4">For Cesarean delivery, an incision is made on the skin.</font>
+			</font> ]]> </const>
+		</module>
+		<module type="herpesInfo3" x="100" y="210">
+		</module>
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Cesarean Delivery"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+	<group>
+		<module type="widget_text" x="150" y="120" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>Incision on the Uterus</b></font><br>
+			<font size="+4">Then an incision is made on the uterus.</font>
+			</font> ]]> </const>
+		</module>
+		<module type="herpesInfo4" x="150" y="185">
+		</module>
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Cesarean Delivery"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+		<group>
+			<module type="widget_text" x="150" y="40" >
+				<const type="integer" name="width" value="600" />
+				<const type="integer" name="height" value="600" />
+				<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>What are the Risks of Cesarean Delivery?</b></font><br><br>
+				<font size="+2"><li> Longer recovery time than vaginal delivery.</li>	    - 3 days in hospital vs. 1 day
+	    - Narcotic pain medications needed
+	    - 6 weeks of decreased activity
+			<li>Possible short term respiratory problems of the newborn.</li>
+	Possible infection of uterus or skin.
+	Risk up to 15%, 
+	Treatment is intravenous antibiotics
+
+
+
+
+
+
+
+	Possible blood loss causing anemia.
+	1% will require a blood transfusion
+			</font>		
+			</font> ]]> </const>
+			</module>
+					<module type="widget_text" x="475" y="175" >
+						<const type="integer" name="width" value="600" />
+						<const type="integer" name="height" value="600" />
+						<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">
+						<font size="+2">
+	Possible blood clots in your lungs.
+	Risk 7 in 1000
+
+
+
+
+
+
+
+
+	Possible injury to internal organs.
+	Risk 1 in 1000
+					</font> ]]> </const>
+					</module>
+			<module type="probabilityGrid" x="190" y="240" scale="50">
+			   <const type="string" name="textCaption" value="" />	
+				<const type="integer" name="numColumns" value="10" />
+				<const type="integer" name="numRows" value="10" />
+				<const type="integer" name="numAffected" value="15" />
+			</module>
+			<module type="probabilityGrid" x="190" y="395" scale="50">
+			   <const type="string" name="textCaption" value="" />	
+				<const type="integer" name="numColumns" value="10" />
+				<const type="integer" name="numRows" value="10" />
+				<const type="integer" name="numAffected" value="1" />
+			</module>
+			<module type="probabilityGrid" x="540" y="240" scale="16">
+			   <const type="string" name="textCaption" value="" />	
+				<const type="integer" name="numColumns" value="33" />
+				<const type="integer" name="numRows" value="33" />
+				<const type="integer" name="numAffected" value="7" />
+			</module>
+			<module type="probabilityGrid" x="540" y="395" scale="16">
+			   <const type="string" name="textCaption" value="" />	
+				<const type="integer" name="numColumns" value="33" />
+				<const type="integer" name="numRows" value="33" />
+				<const type="integer" name="numAffected" value="1" />
+			</module>
+			<module type="widget_text" x="150" y="525" >
+				<const type="integer" name="width" value="600" />
+				<const type="integer" name="height" value="600" />
+		      <const type="string" name="sectionText" value="About Cesarean Delivery"/>	
+				<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+					]]> </const>
+			</module>
+		</group>
+
+		<group>
+			<module type="widget_text" x="150" y="150" >
+				<const type="integer" name="width" value="600" />
+				<const type="integer" name="height" value="600" />
+				<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>What are the Long-Term Effects of Cesarean Delivery?</b></font><br><br>
+				<font size="+4"><ul>
+		<li>More likely to have a Cesarean delivery in your next pregnancy.<br/></li>
+		<li>1% chance of uterine rupture during labor in your next pregnancy.<br/><br><br><br><br><br><br></li>
+		<li>Increased risk of having problems with your placenta in future pregnancies that could cause complications such as bleeding.<br/></li></ul>
+				]]> </const>
+			</module>	
+			<module type="widget_text" x="150" y="525" >
+				<const type="integer" name="width" value="600" />
+				<const type="integer" name="height" value="600" />
+		      <const type="string" name="sectionText" value="About Cesarean Delivery"/>	
+				<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+					]]> </const>
+			</module>
+			<module type="probabilityGrid" x="200" y="250" scale="50">
+			   <const type="string" name="textCaption" value="" />	
+				<const type="integer" name="numColumns" value="10" />
+				<const type="integer" name="numRows" value="10" />
+				<const type="integer" name="numAffected" value="1" />
+			</module>
+		</group>
+
+	<group>
+		<module type="widget_text" x="150" y="150" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>What are the Benefits of Cesarean Delivery?</b></font><br><br>
+			<font size="+4"><ul>
+	<li>No episiotomy or vaginal tear during vaginal delivery.<br/></li>
+	<li>May be less likely to have leakage of urine with cough or sneeze than women with vaginal deliveries.<br/></li>
+	<li>Decreases (but does not completely eliminate) the risk of neonatal herpes in women with genital herpes at the time of labor.<br/></li>
+	<li>A woman who has had one Cesarean delivery can still try to have a vaginal delivery with the next pregnancy<br/></li></ul>
+				</font>		]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Cesarean Delivery"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+	<group>
+		<module type="widget_text" x="150" y="150" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>To Review</b></font><br><br>
+			<font size="+4"><ul>
+	<li>Neonatal herpes is rare but can cause death or long term problems.<br/></li>
+	<li>Neonatal herpes can occur if herpes virus is present in the birth canal at the time of vaginal delivery.<br/></li>
+	<li>One way to prevent neonatal herpes is Cesarean delivery for women with genital sores during labor.<br/></li>
+	<li>Cesarean delivery has some risks to the mother and may not always prevent neonatal herpes.<br/></li></ul>
+				</font>		]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="About Cesarean Delivery"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+		<group>
+			<module type="probStadium" x="75" y="180" level="8">
+				<field type="float" name="finalProb" />
+				<const type="string" name="moduleMode" value="tool" />
+				<const type="float" name="riskTotalSize" value="10000"/>
+				<const type="float" name="riskNumAffected" value="0"/>
+				<const type="float" name="minRiskProb" value="0.0001"/>
+				<const type="float" name="maxRiskProb" value="0.5"/>
+				<const type="string" name="textMoreRisk" value="More Likely"/>
+				<const type="string" name="textLessRisk" value="Less Likely"/>
+				<const type="string" name="questionText" value=" " />
+				<const type="integer" name="numIncrements" value="50"/>
+			</module>
+			<module type="widget_text" x="150" y="40" level="10">
+				<const type="integer" name="width" value="600" />
+				<const type="integer" name="height" value="600" />
+				<const type="cdata" name="textValue"><![CDATA[  <font face="Lucida Grande"><font size="18"><b>Risk Visualizer</b></font><br/><br/>This tool is designed to help you understand and appreciate small risks. Imagine you are in a stadium with 10,000 people.  A few of the people have a special ticket.  The binoculars allow you to look around the stadium and see the people who have the special ticket. These people are shown in red.  
+
+Imagine that 10 of the 10,000 (0.1%) people in the stadium got the special ticket.  Take a look around and see what this looks like.
+
+After you've done that, let's change the percentage of people who have the tickets and see what this looks like. Click the plus button a few times until 800 of 10,000 people have special tickets (8%). Now take a look around and see what this looks like.</font> ]]> </const>
+			</module>		
+			<module type="widget_text" x="150" y="525" level="5">
+				<const type="integer" name="width" value="600" />
+				<const type="integer" name="height" value="600" />
+		      <const type="string" name="sectionText" value="Your Preferences"/>	
+				<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+					]]> </const>
+			</module>
+		</group>
+		<group>
+			<module type="probStadium" name="probHerpesForCaserean" x="75" y="140" >
+				<field type="float" name="finalProb" />
+				<const type="float" name="riskTotalSize" value="10000"/>
+				<const type="float" name="riskNumAffected" value="10"/>
+				<const type="float" name="minRiskProb" value="0"/>
+				<const type="float" name="maxRiskProb" value="0.5"/>
+				<const type="string" name="textMoreRisk" value="More Likely"/>
+				<const type="string" name="textLessRisk" value="Less Likely"/>
+				<const type="string" name="questionText" value=" "/>
+				<const type="integer" name="numIncrements" value="50"/>
+			</module>	
+			<module type="widget_text" x="150" y="525" >
+				<const type="integer" name="width" value="600" />
+				<const type="integer" name="height" value="600" />
+		      <const type="string" name="sectionText" value="Your Preferences"/>	
+				<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+					]]> </const>
+			</module>
+			<module type="widget_text" x="150" y="35">
+				<const type="integer" name="width" value="650" />
+				<const type="integer" name="height" value="600" />
+				<const type="cdata" name="textValue"><![CDATA[  <font face="Lucida Grande"><font size="+7"><b>Preference Assessment: Cesarean to Prevent Neonatal HSV</b></font><br/>Suppose that you have genital herpes sores at the time of labor.  How likely does it need to be for the baby to get herpes if delivered vaginally for you to choose a Cesarean delivery?<br/><br/>To illustrate various risks, take a look at the stadium and choose a risk level.  If there are 10,000 pregnant women with genital herpes sores in labor in this stadium, and all of them delivered their babies vaginally, the number of faces in red will have babies with neonatal herpes.  Choose the risk level at which you would rather have a Cesarean delivery than risk having a baby with neonatal herpes by using the plus and minus arrows.</font> ]]> </const>
+			</module>	
+		</group>
+
+	<group>
+		<module type="widget_text" x="150" y="150" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>What Is The Chance That You Will Have A Baby With Neonatal Herpes?</b></font><br><br>
+			<font size="+4">That depends on if you have genital herpes or if you get herpes while you are pregnant. <i>It is much more common for women who <u>first get herpes during pregnancy</u> to infect their babies.</i><br/><br/><ul>
+					<li>Women who get newly infected with genital herpes at the end of pregnancy have up to a 50% chance of infecting the baby.<br/></li>
+					<li>Women who have been infected with genital herpes before pregnancy, or early in pregnancy, have up to a 4% chance of infecting the baby at delivery.<br/></li></ul>
+					<br/>The most reliable way to know if you have herpes, or if you are at risk to get herpes from your partner, is by a <i>blood test</i>.
+				</font>		]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="Your Preferences"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click next arrow to continue.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+
+<!-- Has Reported Overlap -->
+	<group>
+		<module type="widget_text" x="160" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="Your Preferences"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click the next arrow to continue.</font> 
+				]]> </const>
+		</module>
+
+		<module type="widget_text" x="160" y="75" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+7"><b>Preference Assessment: Blood Test to Detect Herpes</b> <br/><br/></font><font  face="Lucida Grande" size="+4">An accurate blood test for herpes exists. Please select a response to the following statements
+			</font> ]]></const>
+		</module>	
+	
+		<module type="widget_text" x="165" y="160" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3">I would want <u>my blood tested</u> to see if I have herpes as part of my routine prenatal care.
+			</font> ]]></const>
+		</module>
+		<module type="widget_dropDown" name="wantYourBloodTested" x="280" y="205">
+			<const type="boolean" name="requireAnswer" value="false" />
+			<const type="integer" name="numItems" value="5" />
+			<const type="string" name="startingText" value="Click Here to Answer" />
+			<const type="string" name="itemName1" value="Strongly Agree" />
+			<const type="string" name="itemName2" value="Agree" />
+			<const type="string" name="itemName3" value="Do not agree or disagree" />
+			<const type="string" name="itemName4" value="Disagree" />
+			<const type="string" name="itemName5" value="Strongly Disagree" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>	
+
+	
+		<module type="widget_text" x="165" y="370" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3">I would want <u>my partner's blood tested</u> to see if he/she has herpes.	
+			</font> ]]></const>
+		</module>	
+		<module type="widget_dropDown" name="wantPartnersBloodTested" x="280" y="425">
+			<const type="boolean" name="requireAnswer" value="false" />
+			<const type="integer" name="numItems" value="5" />
+			<const type="string" name="startingText" value="Click Here to Answer" />
+			<const type="string" name="itemName1" value="Strongly Agree" />
+			<const type="string" name="itemName2" value="Agree" />
+			<const type="string" name="itemName3" value="Do not agree or disagree" />
+			<const type="string" name="itemName4" value="Disagree" />
+			<const type="string" name="itemName5" value="Strongly Disagree" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	</group>
+
+<condition lval="wantYourBloodTested.selectedItemIndex" operation="lessthanequal" rval="3">
+	<true>
+		<module type="wtp" name="wtpBloodTestSelf" x="85" y="100" >
+			<field type="float" name="finalBid" />
+			<const type="integer" name="lowAnchor" value="0" />
+			<const type="integer" name="highAnchor" value="200" />
+			<const type="string" name="resolutionType" value="percent" />
+			<const type="integer" name="resolutionValue" value="5" />
+			<const type="string" name="questionStart" value="Would you be willing to pay " />
+			<const type="string" name="questionEnd" value=" for a herpes blood test for YOURSELF?" />
+			<const type="string" name="currencyStart" value="$" />
+			<const type="string" name="currencyEnd" value="" />
+			<const type="string" name="searchMethod" value="ping-pong" />
+			<const type="string" name="startPoint" value="" />
+			<const type="string" name="bidAdjustType" value="percent" />
+			<const type="string" name="bidAdjustValue" value="10" />
+			<const type="string" name="roundingIncrement" value="1" />
+		</module>
+	</true>
+	<false>
+	</false>
+</condition>
+
+<condition lval="wantPartnersBloodTested.selectedItemIndex" operation="lessthanequal" rval="3">
+	<true>
+		<module type="wtp" name="wtpBloodTestPartner" x="85" y="100" >
+			<field type="float" name="finalBid" />
+			<const type="integer" name="lowAnchor" value="0" />
+			<const type="integer" name="highAnchor" value="200" />
+			<const type="string" name="resolutionType" value="percent" />
+			<const type="integer" name="resolutionValue" value="5" />
+			<const type="string" name="questionStart" value="Would you be willing to pay " />
+			<const type="string" name="questionEnd" value=" for a herpes blood test for YOUR PARTNER?" />
+			<const type="string" name="currencyStart" value="$" />
+			<const type="string" name="currencyEnd" value="" />
+			<const type="string" name="searchMethod" value="ping-pong" />
+			<const type="string" name="startPoint" value="" />
+			<const type="string" name="bidAdjustType" value="percent" />
+			<const type="string" name="bidAdjustValue" value="10" />
+			<const type="string" name="roundingIncrement" value="1" />
+		</module>
+	</true>
+	<false>
+	</false>
+</condition>
+
+
+<group>
+	<module type="widget_text" x="160" y="545" >
+		<const type="integer" name="width" value="600" />
+		<const type="integer" name="height" value="600" />
+      <const type="string" name="sectionText" value="Your Preferences"/>	
+		<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click the next arrow to continue.</font> 
+			]]> </const>
+	</module>
+
+	<module type="widget_text" x="110" y="40" >
+		<const type="integer" name="width" value="600" />
+		<const type="integer" name="height" value="600" />
+		<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>
+   Preference Assessment: Acyclovir in Pregnancy</b></font></font> ]]></const>
+	</module>
+	<module type="widget_text" x="110" y="130" >
+		<const type="integer" name="width" value="400" />
+		<const type="integer" name="height" value="600" />
+		<const type="cdata" name="textValue"><![CDATA[<font face="Lucida Grande" size="+4">Suppose that you are tested for HSV and find out that you are infected with HSV-2.
+			<br/>The chance that you would infect your baby at the time of delivery is about 2/10,000 (0.02%).  The stadium to the right shows the chances of 2 in 10,000.
+		</font></font> ]]></const>
+	</module>
+	<module type="widget_text" x="110" y="275" >
+		<const type="integer" name="width" value="400" />
+		<const type="integer" name="height" value="600" />
+		<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+4">A medication exists that is believed to be safe in pregnancy and lowers the chance that you would need a Cesarean for genital sores at the time of labor. It also might lower the chance that the baby gets herpes. The medication is taken by mouth for the last month of pregnancy. 
+		</font></font> ]]></const>
+	</module>
+	<module type="probStadium" x="500" y="60" scale="70">
+		<const type="string" name="mode" value="graphic" />
+		<const type="float" name="riskTotalSize" value="10000"/>
+		<const type="float" name="riskNumAffected" value="2"/>
+		<const type="float" name="minRiskProb" value="0.0001"/>
+		<const type="float" name="maxRiskProb" value="0.5"/>
+		<const type="string" name="textMoreRisk" value="More Likely"/>
+		<const type="string" name="textLessRisk" value="Less Likely"/>
+		<const type="string" name="questionText" value=" " />
+		<const type="integer" name="numIncrements" value="50"/>
+	</module>
+
+	<module type="widget_text" x="165" y="400" >
+		<const type="integer" name="width" value="500" />
+		<const type="integer" name="height" value="60" />
+		<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>Would you want to take this medication?</b>
+		</font> ]]></const>
+	</module>	
+	<module type="widget_selectBox" name="wantAcyclovir" x="280" y="425">
+		<const type="integer" name="numItems" value="2" />
+		<const type="string" name="itemName1" value="Yes" />
+		<const type="string" name="itemName2" value="No" />
+		<field type="integer" name="selectedItemIndex" />
+	</module>
+</group>
+
+	
+	<condition lval="wantAcyclovir.selectedItemIndex" operation="equals" rval="1">
+		<true>
+			<module type="wtp" name="wtpAcyclovir" x="85" y="100" >
+				<field type="float" name="finalBid" />
+				<const type="integer" name="lowAnchor" value="0" />
+				<const type="integer" name="highAnchor" value="200" />
+				<const type="string" name="resolutionType" value="percent" />
+				<const type="integer" name="resolutionValue" value="5" />
+				<const type="string" name="questionStart" value="Would you be willing to pay " />
+				<const type="string" name="questionEnd" value=" for the medication?" />
+				<const type="string" name="currencyStart" value="$" />
+				<const type="string" name="currencyEnd" value="" />
+				<const type="string" name="searchMethod" value="ping-pong" />
+				<const type="string" name="startPoint" value="" />
+				<const type="string" name="bidAdjustType" value="percent" />
+				<const type="string" name="bidAdjustValue" value="10" />
+				<const type="string" name="roundingIncrement" value="1" />
+			</module>
+		</true>
+		<false>
+		</false>
+	</condition>
+
+	<group>
+		<module type="widget_text" x="160" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="Your Preferences"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click the next arrow to continue.</font> 
+				]]> </const>
+		</module>
+
+		<module type="widget_text" x="160" y="75" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>Preference Assessment:  Rapid Test to Detect Herpes in Labor</b> <br/><br/></font><font  face="Lucida Grande" size="+4">An accurate test to detect herpes virus in the birth canal at the time of labor is available.
+				<br/>The test requires a swab of your vagina.
+				<br/>If the test reports that herpes is present in the birth canal you may be more likely to have a Cesarean delivery.
+			</font></font> ]]></const>
+		</module>	
+	
+
+		<module type="widget_text" x="160" y="300" >
+			<const type="integer" name="width" value="500" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>If offered, I would want my birth canal checked for herpes virus at the time of labor:</b>
+			</font> ]]></const>
+		</module>	
+		<module type="widget_dropDown" name="wantRapidTest" x="280" y="345">
+			<const type="boolean" name="requireAnswer" value="false" />
+			<const type="integer" name="numItems" value="5" />
+			<const type="string" name="startingText" value="Click Here to Answer" />
+			<const type="string" name="itemName1" value="Strongly Agree" />
+			<const type="string" name="itemName2" value="Agree" />
+			<const type="string" name="itemName3" value="Do not agree or disagree" />
+			<const type="string" name="itemName4" value="Disagree" />
+			<const type="string" name="itemName5" value="Strongly Disagree" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	</group>
+
+
+
+	<group>
+		<module type="widget_text" x="160" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="Your Preferences"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click the next arrow to continue.</font> 
+				]]> </const>
+		</module>
+
+		<module type="widget_text" x="160" y="70" >
+			<const type="integer" name="width" value="400" />
+			<const type="integer" name="height" value="600" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+7"><b>Preference Assessment: Cesarean Delivery to Prevent Neonatal Herpes</b> <br/><br/></font><font face="Lucida Grande" size="+4">Suppose that herpes is found in your birth canal while you are in labor. 
+			</font> ]]></const>
+		</module>	
+	
+		<module type="widget_text" x="165" y="180" >
+			<const type="integer" name="width" value="400" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3">If there is a 1%-4% (1/100-4/100) chance that the baby will get herpes if delivered vaginally, would you proceed with vaginal delivery or would you prefer Cesarean delivery to lower the chance that the baby gets herpes?
+			</font> ]]></const>
+		</module>	
+		<module type="probabilityGrid" x="590" y="138" scale="50">
+		   <const type="string" name="textCaption" value="" />	
+			<const type="integer" name="numColumns" value="10" />
+			<const type="integer" name="numRows" value="10" />
+			<const type="integer" name="numAffected" value="3" />
+		</module>
+		<module type="widget_selectBox" name="lowRiskDeliveryMethod" x="280" y="290">
+			<const type="integer" name="numItems" value="3" />
+			<const type="string" name="itemName1" value="Vaginal delivery" />
+			<const type="string" name="itemName2" value="Cesarean delivery" />
+			<const type="string" name="itemName3" value="I don't know" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	
+
+	</group>
+
+	<group>
+			<module type="widget_text" x="160" y="525" >
+				<const type="integer" name="width" value="600" />
+				<const type="integer" name="height" value="600" />
+		      <const type="string" name="sectionText" value="Your Preferences"/>	
+				<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click the next arrow to continue.</font> 
+					]]> </const>
+			</module>
+
+			<module type="widget_text" x="160" y="70" >
+				<const type="integer" name="width" value="400" />
+				<const type="integer" name="height" value="600" />
+				<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+7"><b>Preference Assessment: Cesarean Delivery to Prevent Neonatal Herpes</b> <br/><br/></font><font face="Lucida Grande" size="+4">Suppose that herpes is found in your birth canal while you are in labor. 
+				</font> ]]></const>
+			</module>	
+		
+		
+			<module type="widget_text" x="165" y="190" >
+				<const type="integer" name="width" value="400" />
+				<const type="integer" name="height" value="60" />
+				<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3">If there is a 50% (50/100) chance that the baby will get herpes if delivered vaginally, would you proceed with vaginal delivery or would you prefer a Cesarean delivery?
+				</font> ]]></const>
+			</module>	
+			<module type="probabilityGrid" x="590" y="135" scale="50">
+			   <const type="string" name="textCaption" value="" />	
+				<const type="integer" name="numColumns" value="10" />
+				<const type="integer" name="numRows" value="10" />
+				<const type="integer" name="numAffected" value="50" />
+			</module>
+			<module type="widget_selectBox" name="highRiskDeliveryMethod" x="280" y="300">
+				<const type="integer" name="numItems" value="3" />
+				<const type="string" name="itemName1" value="Vaginal delivery" />
+				<const type="string" name="itemName2" value="Cesarean delivery" />
+				<const type="string" name="itemName3" value="I don't know" />
+				<field type="integer" name="selectedItemIndex" />
+			</module>
+		</group>
+
+
+	<group>
+		<module type="widget_text" x="160" y="525" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="Finishing up"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">Click the next arrow to continue.</font> 
+				]]> </const>
+		</module>
+
+		<module type="widget_text" x="165" y="50" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3">Please choose a response to the following statements:<br>
+				<b>I found the information in the presentation helpful.</b> 
+			</font> ]]></const>
+		</module>	
+		<module type="widget_dropDown" name="informationHelpful" x="280" y="90">
+			<const type="boolean" name="requireAnswer" value="false" />
+			<const type="integer" name="numItems" value="5" />
+			<const type="string" name="startingText" value="Click Here to Answer" />
+			<const type="string" name="itemName1" value="Strongly Agree" />
+			<const type="string" name="itemName2" value="Agree" />
+			<const type="string" name="itemName3" value="Do not agree or disagree" />
+			<const type="string" name="itemName4" value="Disagree" />
+			<const type="string" name="itemName5" value="Strongly Disagree" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	
+	
+		<module type="widget_text" x="165" y="207" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>I would recommend this presentation to my friends to learn more about herpes in pregnancy.</b>
+			</font> ]]></const>
+		</module>	
+		<module type="widget_dropDown" name="reccomendToFriend" x="280" y="252">
+			<const type="boolean" name="requireAnswer" value="false" />
+			<const type="integer" name="numItems" value="5" />
+			<const type="string" name="startingText" value="Click Here to Answer" />
+			<const type="string" name="itemName1" value="Strongly Agree" />
+			<const type="string" name="itemName2" value="Agree" />
+			<const type="string" name="itemName3" value="Do not agree or disagree" />
+			<const type="string" name="itemName4" value="Disagree" />
+			<const type="string" name="itemName5" value="Strongly Disagree" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	
+		<module type="widget_text" x="165" y="380" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="60" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande" size="+3"><b>The presentation increased my anxiety about my pregnancy.</b>
+			</font> ]]></const>
+		</module>	
+		<module type="widget_dropDown" name="increaseAnxiety" x="280" y="407">
+			<const type="boolean" name="requireAnswer" value="false" />
+			<const type="integer" name="numItems" value="5" />
+			<const type="string" name="startingText" value="Click Here to Answer" />
+			<const type="string" name="itemName1" value="Strongly Agree" />
+			<const type="string" name="itemName2" value="Agree" />
+			<const type="string" name="itemName3" value="Do not agree or disagree" />
+			<const type="string" name="itemName4" value="Disagree" />
+			<const type="string" name="itemName5" value="Strongly Disagree" />
+			<field type="integer" name="selectedItemIndex" />
+		</module>
+	</group>
+
+
+	<group>
+		<module type="widget_text" x="150" y="150" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+			<const type="integer" name="percentDone" value="100" />
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande"><font size="+7"><b>Thank you for your participation.</b></font><br><br><br/>
+			<font size="+4">If you have questions or concerns regarding neonatal herpes, please contact the study coordinator or ask your prenatal provider.</font>
+			]]> </const>
+		</module>	
+		<module type="widget_text" x="150" y="425" >
+			<const type="integer" name="width" value="600" />
+			<const type="integer" name="height" value="600" />
+	      <const type="string" name="sectionText" value="All Done"/>	
+			<const type="cdata" name="textValue"><![CDATA[ <font face="Lucida Grande">This concludes the survey. You may now safely close this window.</font> 
+				]]> </const>
+		</module>
+	</group>
+
+
+</navigation>
+</impact4>

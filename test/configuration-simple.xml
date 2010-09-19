@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<impact4>
+<configuration>
+	<display allowback="true" allowquit="false">
+		<screen height="800" width="600" />
+		<titlebar text="impact4 Survey" />
+	</display>
+	<property name="defaultModemBuffer" value="100" type="integer" />
+	<property name="defaultIsdnBuffer" value="100" type="integer" />
+	<property name="defaultCableBuffer" value="100" type="integer" />
+	<property name="checkXMLValidity" value="true" type="boolean" />
+	<property name="navType" value="full" type="string" />
+	<property name="showProgressBar" value ="true" type="boolean"/>
+	<property name="dumpDatabaseBeforeNavigation" value="false" type="boolean" />
+	<property name="calculateProgressBar" value="true" type="boolean" />
+	<property name="traceSetValue" value="true" type="boolean" />
+	<property name="traceToConsole" value="false" type="boolean" />
+	<property name="enableGarbageCollection" value="false" type="boolean" />
+</configuration>
+<navigation>
+	<module type="widget_text" title="Ibbity" x="411" y="170" scale="100" level="0">
+		<const type="string" name="internalName"></const>
+		<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>For Tomo!</font>]]></const>
+		<const type="integer" name="width" value="500"></const>
+		<const type="integer" name="height" value="300"></const>
+		<const type="string" name="sideToAutoSize" value="left"></const>
+		<const type="string" name="textType" value="HTML"></const>
+		<const type="integer" name="percentDone" value="3" />
+		<const type="string" name="sectionText" value="start" />
+	</module>
+	<group title="Ack">
+		<module type="widget_slider" x="156" y="148" scale="100" level="0">
+			<const type="string" name="internalName"></const>
+			<const type="integer" name="leftAnchor" value="0"></const>
+			<const type="integer" name="rightAnchor" value="10"></const>
+			<const type="string" name="leftAnchorText" value="Left Anchor Text"></const>
+			<const type="string" name="rightAnchorText" value="Right Anchor Text"></const>
+			<const type="integer" name="decimalAccuracy" value="0"></const>
+			<field type="integer" name="sliderValue"></field>
+			<const type="integer" name="percentDone" value="99" />
+			<const type="string" name="sectionText" value="ending" />
+		</module>
+		<module type="widget_selectBox" x="269" y="315" scale="100" level="1">
+			<const type="string" name="internalName"></const>
+			<const type="integer" name="numItems" value="3"></const>
+			<const type="string" name="itemName1" value="Option 1"></const>
+			<const type="string" name="itemName2" value="Option 2"></const>
+			<const type="string" name="itemName3" value="Option 3"></const>
+			<const type="string" name="itemName4"></const>
+			<const type="string" name="itemName5"></const>
+			<const type="string" name="itemName6"></const>
+			<field type="integer" name="selectedItemIndex"></field>
+		</module>
+	</group>
+</navigation>
+</impact4>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<impact4>
+<configuration>
+	<display allowback="true" allowquit="false">
+		<screen height="800" width="600" />
+		<titlebar text="impact4 Survey" />
+	</display>
+	<property name="defaultModemBuffer" value="100" type="integer" />
+	<property name="defaultIsdnBuffer" value="100" type="integer" />
+	<property name="defaultCableBuffer" value="100" type="integer" />
+	<property name="checkXMLValidity" value="true" type="boolean" />
+	<property name="navType" value="full" type="string" />
+	<property name="showProgressBar" value ="true" type="boolean"/>
+	<property name="dumpDatabaseBeforeNavigation" value="false" type="boolean" />
+	<property name="calculateProgressBar" value="true" type="boolean" />
+	<property name="traceSetValue" value="true" type="boolean" />
+	<property name="traceToConsole" value="false" type="boolean" />
+	<property name="enableGarbageCollection" value="false" type="boolean" />
+</configuration>
+<navigation>
+		<module type="widget_text" x="205" y="86" scale="100" level="0">
+			<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj asdfjklasdfjasldfjka sdfkjasdf
+klsajdf
+asdfkj
+asdjfk
+!!!</font>]]></const>
+			<const type="integer" name="width" value="500"></const>
+			<const type="integer" name="height" value="300"></const>
+			<const type="string" name="sideToAutoSize" value="left"></const>
+			<const type="string" name="textType" value="HTML"></const>
+		</module>
+
+				<module type="widget_text" x="205" y="86" scale="100" level="0">
+					<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj 
+look! 2!!!!
+		!!!</font>]]></const>
+					<const type="integer" name="width" value="500"></const>
+					<const type="integer" name="height" value="300"></const>
+					<const type="string" name="sideToAutoSize" value="left"></const>
+					<const type="string" name="textType" value="HTML"></const>
+				</module>
+<condition lval="foo" operation="equals" rval="bar">
+	<true>
+		<module type="widget_text" x="205" y="86" scale="100" level="0">
+			<const type="integer" name="foobar" value="ibbityAck"></const>
+			<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj asdfjklasdfjasldfjka sdfkjasdf
+78669768865796575675765djfk
+!!!</font>]]></const>
+			<const type="integer" name="width" value="500"></const>
+			<const type="integer" name="height" value="300"></const>
+			<const type="string" name="sideToAutoSize" value="left"></const>
+			<const type="string" name="textType" value="HTML"></const>
+		</module>
+		<condition lval="foo" operation="equals" rval="bar">
+			<true>
+				<module type="widget_text" x="205" y="86" scale="100" level="0">
+					<const type="integer" name="foobar" value="ibbityAck"></const>
+					<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj asdfjklasdfjasldfjka sdfkjasdf
+		78669768865796575675765djfk
+		!!!</font>]]></const>
+					<const type="integer" name="width" value="500"></const>
+					<const type="integer" name="height" value="300"></const>
+					<const type="string" name="sideToAutoSize" value="left"></const>
+					<const type="string" name="textType" value="HTML"></const>
+				</module>
+
+			</true>
+			<false>
+														<module type="widget_text" x="205" y="86" scale="100" level="0">
+															<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj 
+										look! 2!!!!
+												!!!</font>]]></const>
+															<const type="integer" name="width" value="500"></const>
+															<const type="integer" name="height" value="300"></const>
+															<const type="string" name="sideToAutoSize" value="left"></const>
+															<const type="string" name="textType" value="HTML"></const>
+														</module>
+														<module type="widget_text" x="205" y="86" scale="100" level="0">
+															<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj 
+										look! 2!!!!
+												!!!</font>]]></const>
+															<const type="integer" name="width" value="500"></const>
+															<const type="integer" name="height" value="300"></const>
+															<const type="string" name="sideToAutoSize" value="left"></const>
+															<const type="string" name="textType" value="HTML"></const>
+														</module>
+				<condition lval="foo" operation="equals" rval="bar">
+					<true>
+						<module type="widget_text" x="205" y="86" scale="100" level="0">
+							<const type="integer" name="foobar" value="ibbityAck"></const>
+							<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj asdfjklasdfjasldfjka sdfkjasdf
+				78669768865796575675765djfk
+				!!!</font>]]></const>
+							<const type="integer" name="width" value="500"></const>
+							<const type="integer" name="height" value="300"></const>
+							<const type="string" name="sideToAutoSize" value="left"></const>
+							<const type="string" name="textType" value="HTML"></const>
+						</module>
+						<module type="widget_text" x="205" y="86" scale="100" level="0">
+							<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj 
+		look! 2!!!!
+				!!!</font>]]></const>
+							<const type="integer" name="width" value="500"></const>
+							<const type="integer" name="height" value="300"></const>
+							<const type="string" name="sideToAutoSize" value="left"></const>
+							<const type="string" name="textType" value="HTML"></const>
+						</module>
+
+					</true>
+					<false>
+						<condition lval="foo" operation="equals" rval="bar">
+							<true>
+								<module type="widget_text" x="205" y="86" scale="100" level="0">
+									<const type="integer" name="foobar" value="ibbityAck"></const>
+									<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj asdfjklasdfjasldfjka sdfkjasdf
+						78669768865796575675765djfk
+						!!!</font>]]></const>
+									<const type="integer" name="width" value="500"></const>
+									<const type="integer" name="height" value="300"></const>
+									<const type="string" name="sideToAutoSize" value="left"></const>
+									<const type="string" name="textType" value="HTML"></const>
+								</module>
+												<module type="widget_text" x="205" y="86" scale="100" level="0">
+													<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj 
+								look! 2!!!!
+										!!!</font>]]></const>
+													<const type="integer" name="width" value="500"></const>
+													<const type="integer" name="height" value="300"></const>
+													<const type="string" name="sideToAutoSize" value="left"></const>
+													<const type="string" name="textType" value="HTML"></const>
+												</module>
+												<module type="widget_text" x="205" y="86" scale="100" level="0">
+													<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj 
+								look! 2!!!!
+										!!!</font>]]></const>
+													<const type="integer" name="width" value="500"></const>
+													<const type="integer" name="height" value="300"></const>
+													<const type="string" name="sideToAutoSize" value="left"></const>
+													<const type="string" name="textType" value="HTML"></const>
+												</module>
+												<module type="widget_text" x="205" y="86" scale="100" level="0">
+													<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj 
+								look! 2!!!!
+										!!!</font>]]></const>
+													<const type="integer" name="width" value="500"></const>
+													<const type="integer" name="height" value="300"></const>
+													<const type="string" name="sideToAutoSize" value="left"></const>
+													<const type="string" name="textType" value="HTML"></const>
+												</module>
+							</true>
+							<false>
+								
+							</false>
+						</condition>
+					</false>
+				</condition>
+			</false>
+		</condition>
+	</true>
+	<false>
+	</false>
+</condition>
+		<module type="widget_text" x="205" y="86" scale="100" level="0">
+			<const type="integer" name="foobar" value="ibbityAck"></const>
+			<const type="cdata" name="textValue"><![CDATA[<font face='Helvetica' size='14'>idjfkl;jaskl;fj asdfjklasdfjasldfjka sdfkjasdf
+78669768865796575675765djfk
+!!!</font>]]></const>
+			<const type="integer" name="width" value="500"></const>
+			<const type="integer" name="height" value="300"></const>
+			<const type="string" name="sideToAutoSize" value="left"></const>
+			<const type="string" name="textType" value="HTML"></const>
+		</module>
+</navigation>
+</impact4>

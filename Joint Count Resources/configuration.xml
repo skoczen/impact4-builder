@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<impact4>
+<configuration>
+	<display allowback="true" allowquit="false">
+		<screen height="800" width="600" />
+		<titlebar text="impact4 Survey" />
+	</display>
+	<property name="defaultModemBuffer" value="100" type="integer" />
+	<property name="defaultIsdnBuffer" value="100" type="integer" />
+	<property name="defaultCableBuffer" value="100" type="integer" />
+	<property name="checkXMLValidity" value="true" type="boolean" />
+	<property name="navType" value="full" type="string" />
+	<property name="showProgressBar" value ="true" type="boolean"/>
+	<property name="dumpDatabaseBeforeNavigation" value="false" type="boolean" />
+	<property name="calculateProgressBar" value="true" type="boolean" />
+	<property name="traceSetValue" value="true" type="boolean" />
+	<property name="traceToConsole" value="false" type="boolean" />
+	<property name="enableGarbageCollection" value="false" type="boolean" />
+</configuration>
+<navigation>
+		<module type="jointCount" name="jointCount1" x="80" y="75" scale="80" level="0">    
+			<field type="string"  name="jointResponseHash"/>
+			<field type="integer" name="numPainAndSwelling"/>
+			<field type="integer" name="numPainful"/>
+			<field type="integer" name="numSwollen"/>
+		</module>
+		<module type="showJC" name="showJointCount" x="14" y="0" scale="100" level="0">
+		</module>
+
+</navigation>
+</impact4>
