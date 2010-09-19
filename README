@@ -1,0 +1,8 @@
+This project is a graphical builder for impact4 surveys.
+
+The live version is located at http://i4builder.quantumimagery.com/
+
+Please note that running this project requires the Controls and Resources directories to be provided (preferably via symlink) from the impact4-client project. ( http://github.com/skoczen/impact4-client ).
+
+
+
